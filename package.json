@@ -21,6 +21,7 @@
     "clean:modules": "lerna exec rimraf node_modules && rimraf node_modules",
     "lint": "eslint .",
     "lint:report": "eslint -f checkstyle -o ./build2/reports/lint/eslint-checkstyle-result.xml .",
+    "validate": "yarn tsc && yarn lint",
     "test": "yarn test:unit && yarn test:e2e",
     "test:unit": "yarn test:karma && yarn test:browser && yarn test:server",
     "test:e2e": "yarn --cwd test/e2e start",
@@ -62,9 +63,14 @@
   "devDependencies": {
     "@babel/cli": "^7.8.0",
     "@babel/core": "^7.8.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-transform-modules-commonjs": "^7.10.1",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.2",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-module-exports": "^1.0.2",
@@ -75,6 +81,7 @@
     "eslint": "^7.1.0",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-jasmine": "^2.10.1",
+    "eslint-plugin-jsdoc": "^25.4.2",
     "eslint-plugin-node": "^11.1.0",
     "globby": "^6.1.0",
     "istanbul-instrumenter-loader": "^3.0.1",
@@ -93,6 +100,7 @@
     "lodash": "4.17.11",
     "promise.allsettled": "^1.0.1",
     "shelljs": "0.8.3",
+    "typescript": "^3.9.2",
     "webpack": "^3.0.0"
   },
   "jest-junit": {

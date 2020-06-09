@@ -31,7 +31,7 @@ shell.echo(chalk.green('Babel completed'));
 
 shell.echo(chalk.green('Bundling completed'));
 
-shell.cp('-Rf', ['package.json', 'LICENSE', 'THIRD-PARTY-NOTICES', '*.md'], `${NPM_DIR}`);
+shell.cp('-Rf', ['types', 'package.json', 'LICENSE', 'THIRD-PARTY-NOTICES', '*.md'], `${NPM_DIR}`);
 
 shell.echo('Modifying final package.json');
 let packageJSON = JSON.parse(fs.readFileSync(`./${NPM_DIR}/package.json`));

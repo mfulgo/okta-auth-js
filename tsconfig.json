@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "composite": false,
+    "module": "es6",
+    "target": "es6",
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "strictNullChecks": false,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./dist/types/generated",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": false,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "OktaAuth": ["./lib/browser/browserIndex"]
+    }
+  },
+  "files": [
+    "package.json"
+  ],
+  "include": [
+    "types/**/*.ts",
+    "lib/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "build2"
+  ]
+}
